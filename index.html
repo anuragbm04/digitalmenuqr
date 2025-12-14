@@ -1,0 +1,191 @@
+ <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Anurag Family Restaurant - Luxury Dining</title><script src="https://cdn.tailwindcss.com"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style> :root { --gold: #d4af37; --dark-bg: #0f172a; --card-bg: #1e293b; } body { font-family: 'Lato', sans-serif; background-color: var(--dark-bg); color: #e2e8f0; overflow-x: hidden; } h1, h2, h3, h4, .serif-font { font-family: 'Playfair Display', serif; } #hero-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; } .hero-content { position: relative; z-index: 10; pointer-events: none; } .hero-content > * { pointer-events: auto; } .menu-card { background-color: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; } .menu-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); border-color: var(--gold); } .menu-image-container { overflow: hidden; position: relative; } .menu-image-container::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); } .menu-image { transition: transform 0.6s ease; } .menu-card:hover .menu-image { transform: scale(1.1); } .text-gold { color: var(--gold); } .text-gradient-gold { background: linear-gradient(to right, #fbfbfb, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: var(--dark-bg); } ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; } ::-webkit-scrollbar-thumb:hover { background: var(--gold); } </style></head><body class="antialiased"><nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/5 transition-all duration-300"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-24"><div class="flex items-center gap-3"><div class="w-10 h-10 border border-amber-500/50 rounded-full flex items-center justify-center backdrop-blur-sm bg-slate-900/50"><span class="serif-font text-xl text-amber-500">A</span></div><div><h1 class="serif-font text-2xl text-white tracking-widest uppercase shadow-black drop-shadow-md">Anurag</h1><p class="text-[10px] text-amber-500 tracking-[0.3em] uppercase">Fine Dining</p></div></div><div class="hidden md:flex space-x-10"><a href="#home" class="text-gray-300 hover:text-amber-400 text-sm tracking-widest uppercase transition-colors shadow-black drop-shadow-sm">Home</a><a href="#menu" class="text-gray-300 hover:text-amber-400 text-sm tracking-widest uppercase transition-colors shadow-black drop-shadow-sm">Menu</a><a href="#about" class="text-gray-300 hover:text-amber-400 text-sm tracking-widest uppercase transition-colors shadow-black drop-shadow-sm">About</a><a href="#contact" class="text-gray-300 hover:text-amber-400 text-sm tracking-widest uppercase transition-colors shadow-black drop-shadow-sm">Visit</a></div><button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white text-2xl"><i class="fa-solid fa-bars-staggered"></i></button></div></div><div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-white/10 p-4 space-y-4"><a href="#home" class="block text-gray-300 hover:text-amber-500 uppercase tracking-wider text-sm">Home</a><a href="#menu" class="block text-gray-300 hover:text-amber-500 uppercase tracking-wider text-sm">Menu</a><a href="#contact" class="block text-gray-300 hover:text-amber-500 uppercase tracking-wider text-sm">Visit</a></div></nav><section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[#0f172a]"><div id="hero-canvas"></div><div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-transparent to-slate-900/90 pointer-events-none z-1"></div><div class="hero-content text-center px-4 max-w-4xl mx-auto z-10"><h3 id="luxury-greeting" class="serif-font text-2xl md:text-3xl text-amber-500/90 italic mb-6 drop-shadow-lg">Welcome</h3><div class="inline-block border-b border-amber-500/50 pb-2 mb-6 backdrop-blur-sm bg-slate-900/20 px-4 rounded-full"><span class="text-amber-400 uppercase tracking-[0.3em] text-xs font-bold">Exquisite Flavors in Azamgarh</span></div><h1 class="serif-font text-5xl md:text-7xl lg:text-9xl text-white mb-8 leading-tight drop-shadow-2xl"> Taste the <br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">Golden Era</span></h1><p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-lg"> Where culinary artistry meets a symphony of flavors. Experience luxury dining redefined in the heart of the city. </p><div class="flex flex-col sm:flex-row gap-6 justify-center"><a href="#menu" class="group relative px-10 py-4 bg-amber-500 text-slate-900 font-bold uppercase tracking-widest text-xs hover:bg-white transition-all duration-300 shadow-lg shadow-amber-500/20"> Explore Menu </a></div></div></section><section id="menu" class="py-24 bg-[#0f172a] relative z-20"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-20"><h2 class="serif-font text-4xl md:text-5xl text-white mb-4">Our Masterpieces</h2><div class="w-24 h-0.5 bg-amber-500 mx-auto mb-8"></div><div class="flex justify-center flex-wrap gap-6 text-sm font-light uppercase tracking-widest text-gray-500"><button onclick="filterMenu('all')" class="menu-tab active text-amber-500 border-b border-amber-500 pb-1 transition-all" data-category="all">All</button><button onclick="filterMenu('starters')" class="menu-tab hover:text-amber-500 transition-all" data-category="starters">Starters</button><button onclick="filterMenu('main')" class="menu-tab hover:text-amber-500 transition-all" data-category="main">Mains</button><button onclick="filterMenu('dessert')" class="menu-tab hover:text-amber-500 transition-all" data-category="dessert">Dessert</button></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"><div class="menu-card group rounded-xl overflow-hidden starters"><div class="menu-image-container h-64"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Paneer Tikka" class="menu-image w-full h-full object-cover"><div class="absolute bottom-4 left-4 z-10"><h3 class="serif-font text-2xl text-white">Paneer Tikka</h3><p class="text-amber-500 text-sm uppercase tracking-wide">Clay Oven Special</p></div></div><div class="p-6"><p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Cottage cheese cubes marinated in yogurt and aromatic spices, roasted to perfection in a traditional tandoor.</p><div class="flex justify-between items-center border-t border-white/5 pt-4"><span class="text-white text-lg font-serif">₹220</span><span class="text-xs text-gray-500 uppercase">Vegetarian</span></div></div></div><div class="menu-card group rounded-xl overflow-hidden main"><div class="menu-image-container h-64"><img src="https://images.unsplash.com/photo-1585937421612-70a008356f36?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dal Makhani" class="menu-image w-full h-full object-cover"><div class="absolute bottom-4 left-4 z-10"><h3 class="serif-font text-2xl text-white">Dal Makhani</h3><p class="text-amber-500 text-sm uppercase tracking-wide">Signature Dish</p></div></div><div class="p-6"><p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Whole black lentils cooked overnight on slow charcoal fire, finished with cream and unsalted butter.</p><div class="flex justify-between items-center border-t border-white/5 pt-4"><span class="text-white text-lg font-serif">₹240</span><span class="text-xs text-gray-500 uppercase">Chef's Choice</span></div></div></div><div class="menu-card group rounded-xl overflow-hidden main"><div class="menu-image-container h-64"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Biryani" class="menu-image w-full h-full object-cover"><div class="absolute bottom-4 left-4 z-10"><h3 class="serif-font text-2xl text-white">Royal Biryani</h3><p class="text-amber-500 text-sm uppercase tracking-wide">Awadhi Style</p></div></div><div class="p-6"><p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Long grain basmati rice cooked with fresh vegetables, saffron, and whole spices in a sealed handi.</p><div class="flex justify-between items-center border-t border-white/5 pt-4"><span class="text-white text-lg font-serif">₹260</span><span class="text-xs text-gray-500 uppercase">Bestseller</span></div></div></div><div class="menu-card group rounded-xl overflow-hidden starters"><div class="menu-image-container h-64"><img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kebab" class="menu-image w-full h-full object-cover"><div class="absolute bottom-4 left-4 z-10"><h3 class="serif-font text-2xl text-white">Hara Bhara Kebab</h3><p class="text-amber-500 text-sm uppercase tracking-wide">Healthy Choice</p></div></div><div class="p-6"><p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Pan-fried patties made with fresh spinach, green peas, and potatoes, spiced with herbs.</p><div class="flex justify-between items-center border-t border-white/5 pt-4"><span class="text-white text-lg font-serif">₹180</span><span class="text-xs text-gray-500 uppercase">Vegan Option</span></div></div></div><div class="menu-card group rounded-xl overflow-hidden main"><div class="menu-image-container h-64"><img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Butter Paneer" class="menu-image w-full h-full object-cover"><div class="absolute bottom-4 left-4 z-10"><h3 class="serif-font text-2xl text-white">Shahi Paneer</h3><p class="text-amber-500 text-sm uppercase tracking-wide">Royal Gravy</p></div></div><div class="p-6"><p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Cottage cheese simmered in a rich cashew and tomato gravy, garnished with cream and coriander.</p><div class="flex justify-between items-center border-t border-white/5 pt-4"><span class="text-white text-lg font-serif">₹280</span><span class="text-xs text-gray-500 uppercase">Classic</span></div></div></div><div class="menu-card group rounded-xl overflow-hidden dessert"><div class="menu-image-container h-64"><img src="https://images.unsplash.com/photo-1589119908995-c6837fa14848?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gulab Jamun" class="menu-image w-full h-full object-cover"><div class="absolute bottom-4 left-4 z-10"><h3 class="serif-font text-2xl text-white">Gulab Jamun</h3><p class="text-amber-500 text-sm uppercase tracking-wide">Sweet Ending</p></div></div><div class="p-6"><p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Traditional milk-solid dumplings fried golden and soaked in rose-scented sugar syrup.</p><div class="flex justify-between items-center border-t border-white/5 pt-4"><span class="text-white text-lg font-serif">₹80</span><span class="text-xs text-gray-500 uppercase">Dessert</span></div></div></div></div></div></section><section id="contact" class="py-24 bg-[#020617] relative overflow-hidden z-20"><div class="absolute inset-0 opacity-10"><div class="absolute -top-20 -left-20 w-96 h-96 border border-white rounded-full"></div><div class="absolute bottom-20 right-20 w-64 h-64 border border-amber-500 rounded-full"></div></div><div class="max-w-4xl mx-auto px-4 relative z-10 text-center"><h2 class="serif-font text-4xl text-white mb-12">Plan Your Visit</h2><div class="grid md:grid-cols-3 gap-8"><div class="p-8 border border-white/10 bg-[#0f172a] hover:border-amber-500/50 transition-colors group"><div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-500 group-hover:scale-110 transition-transform"><i class="fa-solid fa-location-dot text-xl"></i></div><h4 class="serif-font text-xl text-white mb-2">Location</h4><p class="text-gray-400 text-sm leading-relaxed">Civil Lines, Near Chowk<br>Azamgarh - 276001</p></div><div class="p-8 border border-white/10 bg-[#0f172a] hover:border-amber-500/50 transition-colors group"><div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-500 group-hover:scale-110 transition-transform"><i class="fa-solid fa-clock text-xl"></i></div><h4 class="serif-font text-xl text-white mb-2">Opening Hours</h4><p class="text-gray-400 text-sm leading-relaxed">Mon - Sun<br>11:00 AM - 11:00 PM</p></div><div class="p-8 border border-white/10 bg-[#0f172a] hover:border-amber-500/50 transition-colors group"><div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-500 group-hover:scale-110 transition-transform"><i class="fa-solid fa-phone text-xl"></i></div><h4 class="serif-font text-xl text-white mb-2">Reservations</h4><p class="text-gray-400 text-sm leading-relaxed">+91 43210<br>booking@anurag.com</p></div></div><div class="mt-16 pt-8 border-t border-white/5"><p class="text-gray-600 text-sm">© 2025 Anurag Family Restaurant. Elegance in every bite.</p></div></div></section>
+
+    <script>
+        // --- ADDED GREETING LOGIC HERE ---
+        function updateLuxuryGreeting() {
+            const hour = new Date().getHours();
+            const greetingEl = document.getElementById('luxury-greeting');
+            let greeting = "Welcome";
+
+            if (hour >= 5 && hour < 12) greeting = "Good Morning";
+            else if (hour >= 12 && hour < 17) greeting = "Good Afternoon";
+            else if (hour >= 17 && hour < 23) greeting = "Good Evening";
+            
+            if(greetingEl) greetingEl.innerText = greeting;
+        }
+        updateLuxuryGreeting();
+
+        // Menu Filter Logic
+        function filterMenu(category) {
+            // Button styles
+            document.querySelectorAll('.menu-tab').forEach(btn => {
+                if(btn.dataset.category === category) {
+                    btn.classList.add('text-amber-500', 'border-b', 'border-amber-500', 'pb-1');
+                } else {
+                    btn.classList.remove('text-amber-500', 'border-b', 'border-amber-500', 'pb-1');
+                }
+            });
+
+            // Card Visibility
+            document.querySelectorAll('.menu-card').forEach(card => {
+                if(category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                    // Simple animation reset
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // --- 3D "Golden Stardust" Particle Animation ---
+        function initThree() {
+            const container = document.getElementById('hero-canvas');
+            if(!container) return;
+
+            const scene = new THREE.Scene();
+            // No background needed, letting CSS gradient show through for depth
+            scene.background = null;
+
+            const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+            camera.position.z = 50;
+
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            container.appendChild(renderer.domElement);
+
+            // Create Particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const count = 1500;
+            const posArray = new Float32Array(count * 3);
+            const scaleArray = new Float32Array(count);
+
+            for(let i = 0; i < count * 3; i+=3) {
+                // Wide spread for full screen coverage
+                posArray[i] = (Math.random() - 0.5) * 150; // x
+                posArray[i+1] = (Math.random() - 0.5) * 100; // y
+                posArray[i+2] = (Math.random() - 0.5) * 100; // z
+                
+                scaleArray[i/3] = Math.random();
+            }
+
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particlesGeometry.setAttribute('aScale', new THREE.BufferAttribute(scaleArray, 1));
+
+            // Custom Shader Material for glowing dots
+            // Since shaders are complex to inline simply, we'll use PointsMaterial with a texture or custom drawing
+            // Using a simple PointsMaterial with canvas-generated texture for soft glow
+            
+            const getTexture = () => {
+                const canvas = document.createElement('canvas');
+                canvas.width = 32;
+                canvas.height = 32;
+                const ctx = canvas.getContext('2d');
+                // Draw radial gradient
+                const gradient = ctx.createRadialGradient(16, 16, 0, 16, 16, 16);
+                gradient.addColorStop(0, 'rgba(255, 215, 0, 1)'); // Gold center
+                gradient.addColorStop(0.4, 'rgba(212, 175, 55, 0.5)'); // Darker gold
+                gradient.addColorStop(1, 'rgba(0, 0, 0, 0)'); // Transparent edge
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, 32, 32);
+                const texture = new THREE.Texture(canvas);
+                texture.needsUpdate = true;
+                return texture;
+            };
+
+            const material = new THREE.PointsMaterial({
+                size: 0.8,
+                map: getTexture(),
+                transparent: true,
+                depthWrite: false,
+                blending: THREE.AdditiveBlending,
+                color: 0xffd700
+            });
+
+            const particlesMesh = new THREE.Points(particlesGeometry, material);
+            scene.add(particlesMesh);
+
+            // Connecting Lines (Constellation effect)
+            // We'll calculate lines based on distance in the animation loop (expensive) 
+            // OR just have floating lines. Let's do floating curves for elegance.
+            
+            // Add some floating curves "Silk ribbons"
+            const curveGroup = new THREE.Group();
+            for(let i=0; i<5; i++) {
+                const curve = new THREE.CatmullRomCurve3([
+                    new THREE.Vector3(-60, (Math.random()-0.5)*50, (Math.random()-0.5)*20),
+                    new THREE.Vector3(-20, (Math.random()-0.5)*50, (Math.random()-0.5)*20),
+                    new THREE.Vector3(20, (Math.random()-0.5)*50, (Math.random()-0.5)*20),
+                    new THREE.Vector3(60, (Math.random()-0.5)*50, (Math.random()-0.5)*20),
+                ]);
+                const points = curve.getPoints(50);
+                const geometry = new THREE.BufferGeometry().setFromPoints(points);
+                const mat = new THREE.LineBasicMaterial({ color: 0xd4af37, transparent: true, opacity: 0.2 });
+                const curveObject = new THREE.Line(geometry, mat);
+                curveGroup.add(curveObject);
+            }
+            scene.add(curveGroup);
+
+
+            // Interaction
+            let mouseX = 0;
+            let mouseY = 0;
+            
+            document.addEventListener('mousemove', (event) => {
+                mouseX = event.clientX - window.innerWidth / 2;
+                mouseY = event.clientY - window.innerHeight / 2;
+            });
+
+            // Animation Loop
+            function animate() {
+                requestAnimationFrame(animate);
+
+                const time = Date.now() * 0.0005;
+
+                // Gentle Rotation of entire system
+                particlesMesh.rotation.y = time * 0.05;
+                particlesMesh.rotation.x = mouseY * 0.0001; // subtle tilt
+
+                // Wave movement for particles
+                const positions = particlesMesh.geometry.attributes.position.array;
+                for(let i = 1; i < count * 3; i+=3) {
+                    // Y motion based on X position and time
+                    positions[i] += Math.sin(time + positions[i-1] * 0.05) * 0.05;
+                }
+                particlesMesh.geometry.attributes.position.needsUpdate = true;
+
+                // Curve movement (Silk effect)
+                curveGroup.rotation.z = Math.sin(time * 0.2) * 0.05;
+                curveGroup.children.forEach((curve, index) => {
+                    curve.rotation.x = Math.sin(time * 0.1 + index) * 0.1;
+                    curve.position.y = Math.sin(time * 0.2 + index) * 2;
+                });
+
+                // Mouse Camera Parallax
+                camera.position.x += (mouseX * 0.01 - camera.position.x) * 0.05;
+                camera.position.y += (-mouseY * 0.01 - camera.position.y) * 0.05;
+                camera.lookAt(0,0,0);
+
+                renderer.render(scene, camera);
+            }
+
+            animate();
+
+            // Resize
+            window.addEventListener('resize', () => {
+                camera.aspect = container.offsetWidth / container.offsetHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(container.offsetWidth, container.offsetHeight);
+            });
+        }
+
+        window.onload = initThree;
+    </script>
+</body>
+</html>
